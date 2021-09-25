@@ -1,0 +1,124 @@
+q1. What is Run-Length Smoothing Algorithm (RLSA)?
+a1: The Run Length Smoothing Algorithm (RLSA) is a method that can be used for Block segmentation and text discrimination. The method developed for the Document Analysis System consists of two steps. First, a segmentation procedure subdivides the area of a document into regions (blocks), each of which should contain only one type of data (text, graphic, halftone image, etc.). Next, some basic features of these blocks are calculated.
+
+q2. What is the X-Y cut algorithm?
+a2: X-Y cut algorithm segments the document provided recursively in a stores the Segments blocks in a tree like structure to match for layout similarity from a dataset.
+
+q3. What are Segmentation Algorithms?
+a3: A segmentation algorithm can be viewed as a classification algorithm when it lebels the parts that are segmented.
+
+q4. What is the use of Segmentation Algorithms?
+a4: Segmentation algorithms can be applied to document images, to natural images, to medical images and also to 3D meshes.
+
+q5. How many types of identifications of type of contents? Explain.
+a5: There are two types of algorithms. They are, physical layout and logical layout. The physical layout relates to the nature of context such as text, typewritten text, graphics, diagram, picture etc. The logical layout relates to the function of context such as header, footnote, main body etc.  
+
+q6. What is the main processing step of document analysis relies on?
+a6: The main processing of document analysis depends on extracting or indexing the text that they contain.
+
+q7. Is there any specific category for historical documents? Explain.
+a7: There is no specific category for historical documents. Because all the categories on the figure contain both contemporary and historical documents.
+
+q8. Why is there no specific category for historical documents?
+a8: Defining a specific category for historical documents would require.
+
+q9. What are the challenges of surveying technical documents or maps?
+a9: The definition of what their layout is, is a challenge and they need specific tools to be analyzed.
+
+q10. What are the document image segmentation algorithm type groups?
+a10: They are classified into three groups. 1. Top-down 2. Bottom-up and 3. Hybrid Algorithm
+
+
+q11. What are the three main scales of image segmentation algorithms?
+a11: The three main scales of image segmentation algorithms are,
+Pixels
+Connected components
+Patches
+
+q12. What is the main limitation of segmentation algorithms?
+a12: The main limitation is, A given segmentation algorithm may not be able to segment any layout.
+
+q13. What are the subcategories of the algorithms in group one?
+a13: The subcategories are,
+The algorithms that make clear assumptions about the document layout.
+The algorithms that use filtering techniques to make the document regions appear.
+The algorithms that try to identify straight lines.
+
+q14. What is the difference between the algorithms of group one and group two?
+a14: The main difference is, The group two algorithms try to adapt to local variations in the document in order to be able to segment a border range of layouts with the same algorithm.
+
+q15. What are the clustering algorithms?
+a15: They are bottom up algorithms and try to cluster elements based on geometric or texture or a more general 185 set of features.
+
+q16. What are the algorithms based on function analysis?
+a16: They mostly rely on function optimization e.g. trying to bring a function as close as possible to an objective value.
+
+q17. What are the classification algorithms?
+a17: they are trained to recognize the different types of elements based on a given set of features. As a consequence they need training and produce labeled elements. 195 The regions are made of adjacent elements having the same label hence they are bottom up algorithms.
+
+q18. What algorithms are in group three?
+a18: They try to overcome the limitations of the other algorithms by combining them or by using artificial intelligence. Thus they cannot be considered 200 as bottom-up or top-down algorithms.
+
+q19. What are the subcategories of group three?
+a19:  1. The hybrid algorithms combine several other algorithms in symbiosis: While they could potentially accumulate the strength of several other algorithms, some of them tend to be very complex without significant performance or versatility improvement.
+2. The combination algorithm (only one has been presented) [115] combines the results of several algorithms to effectively improve them.
+3. The neural network algorithms [15, 116] make use of artificial intelligence to automatically learn significant features and perform the required task.
+
+q20. What is the layout constrained by the group one algorithm?
+a20: The algorithms in this group are such that their internal mechanisms limit the variety
+of layouts that they can segment.
+Segmentation based on document structure assumption.
+Segmentation based on filtering algorithms.
+Segmentation based on straight line identification algorithms.
+
+q21. What is the layout constrained by the group two parameters?
+Segmentation based on clustering.
+Segmentation based on function analysis.
+Segmentation based on classification.
+
+q22. What is the layout potentially unconstrained of group three?
+Segmentation based on hybrid techniques.
+Segmentation based on algorithm combination.
+Segmentation based on neural networks.
+
+q23. What are the remarks on the applicability of the surveyed algorithms?
+Ans: All segmentation algorithms are script independent e.g. their per565 formance does not depend on the language of the document. Many algorithms working on binary images assume that the image is the result of a thresholding process similar to Otsu binarization.
+
+q24.  How was the evaluation of segmentation algorithms done?
+Ans: Evaluating and comparing the performance of an algorithm is a dicult task. The authors
+summarized here the current state of the art for the evaluation of document segmentation
+algorithms. A first remark that can be made in the light of all the surveyed papers is that many authors tend to compare their algorithms with other algorithms based on 605 the same technique.
+
+q25. What is the segmentation in document image analysis?
+Ans: In document image analysis, segmentation is the task that identifies the regions of
+a document. The increasing number of applications of document analysis requires a good knowledge of the available technologies.
+
+q26. Name two of the first document segmentation algorithms.
+Ans: Some first document image segmentation algorithms are,
+Run-Length Smoothing Algorithm (RLSA)
+X-Y Cut algorithm
+
+q27. What is the scope of the survey for the paper?
+Ans: There are mainly three scopes of this survey,
+The Scientific Scope
+The Document Scope
+The Publication Scope
+
+q28. What is the scientific Scope of this survey?
+Ans: Segmentation algorithms can be applied to document images but also to a set of
+document images, to natural 40 images, to medical images and even to 3D meshes. More generally a segmentation algorithm can be viewed as a specific kind of clustering or partitioning algorithm or of classification algorithm when it labels the parts that are segmented.
+
+q29. What are the two types of identifications?
+Ans: The identifications are,
+The Physical Layout
+The Logical Layout
+
+q30. What does the physical layout relate to?
+Ans: The physical layout relates to the nature of the content such as text, typewritten text,
+graphics, diagrams, pictures, decoration, etc.
+
+q31. What does the logical layout relate to?
+Ans: The logical layout relates to the function of the content such as header, footnote, main body, etc.
+
+q32. What types of algorithms did the authors focus on?
+Ans: In this survey the authors focused on algorithms that provide regions without labels or with a physical layout labeling.
