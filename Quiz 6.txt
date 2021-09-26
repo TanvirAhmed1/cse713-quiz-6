@@ -228,3 +228,94 @@ The first order neighborhood of a connected component is computed with the Delau
 triangulation and they use the second order neighbors to obtain all the possible 
 triplets. They also use a specific training called MMS which maximizes the class 
 separability.
+
+q41. What does texture only clustering algorithm do?
+a41. Three algorithms use only texture features. Journet et al. use
+features at pixel level and tested them on both modern and historical documents. They
+370 highlight the importance of a multi-resolution approach to reduce the noise in pixel
+clustering techniques. Working at pixel level allows the clustering of many dierent
+types of objects such as drop caps, a specific kind of graphic, text, text fonts, etc.
+Mehri et al demonstrate that Gabor texture features outperform auto-correlation
+and co-occurrence texture features.
+
+q42. What is Generic feature clustering?
+a42. Six algorithms use several types of features. The most outstanding one
+is that of Chen and Wu. Roughly, they cut the document into blocks which are
+then multi-thresholded to create several layers. The connected components of each
+layer are identified and grouped across blocks based on a predefined set of features.
+380 The evaluation data set is small but very challenging as it contains
+only magazine covers and advertisements that are multi-layered color documents with
+uneven background. They outperform significantly the state of the art and achieve both
+precision and recall above 99% for text extraction.
+
+q43. What is Segmentation based on function analysis?
+a43. Sixteen algorithms rely on function analysis techniques. They have the advantage
+that, based on the “flexibility” of the functions, one can select how much they will
+follow the contours of the elements to segment. This can be helpful if we want to have
+390 a rough outline of the document regions or if we want to segment precise elements such
+as warped text lines.
+
+q44. Explain Active contours.
+a44. All these techniques were proposed by Bukhari et al. Their work can be
+considered as the state of the art for text line extraction based on active contours. It
+395 works by adding coupled snakelets on the top and bottom of a connected component 
+and by deforming them based on the vertical component of the gradient vector flow. 
+The snakelets are then extended laterally in order to include neighboring connected 
+components. This algorithm has been evaluated on 10 dierent scripts in.
+
+q45. What is Function optimization?
+a45. Seven algorithms use function optimization. They usually define
+a cost or energy function which needs to be minimized. So far, they work best
+for text line segmentation although the ISPL method was second in the last ICDAR
+document segmentation competition. The state of the art with this technique is
+405 held by Ryu et al. which also won the ICDAR 2013 Competition for handwriting
+segmentation and 2015 Competition on text line detection. Their contribution
+resides in over-segmenting connected components that do not fit a normalization
+criteria. From this they obtain a better estimation of the belonging of each connected
+component to a given text line which in turn allows them to build a better cost function.
+410 The optimization of this function is improved with dynamic programming. The over
+segmented components are then merged into proper components.
+
+q46. What is the use of Probabilistic layout estimation?
+a46. Two algorithms make a probabilistic estimation of the layout but do not
+bring a significant improvement. Yin and Liu perform an estimation of the number
+of text lines with a blur filter and then use a variational Bayes approach to segment the
+image rescaled at 75 dpi. This improves slightly the state of the art on a large but not
+425 very challenging data set. Cruz and Terrades proposed a method based on Conditional 
+Random Field (CRF) and location features similar to but without  any improvement over 
+the state of the art. This work is at the crossing between optimizing a probabilistic 
+layout estimation and a classification.
+
+q47. What is the use of Segmentation based on classification?
+a47. This is the second most popular type of algorithms with 30 algorithms. A noticeable
+dierence in the scientific work when compared with the clustering is the fact that
+classification algorithms all require training.
+
+q48. What is Texture classification?
+a48. Three algorithms use only texture features. Baechler and Ingold string 
+together three Dynamic Multi-Layer Perceptrons (DMLP) at three resolutions to
+segment historical documents. Each DMLP uses the label output of the DMLP at a
+lower resolution plus texture features at its resolution. Each level processes only part
+of the labels produced by the lower level in order to refine these specific labels.
+
+q49. Explain Feature classification.
+a49. Among them, 12 use only binary images. Peng and Pinson focus on extracting overlapping handwritten and typewritten
+text. Pinson and Barret’s algorithm automatically selects the appropriate features
+445 based on the desired typewritten text classification accuracy. It selects the first 100 feature
+vectors of a Principal Component Analysis (PCA) of the character images. Then
+any new text is projected into this new space. If it is close enough to the typewritten
+or the handwritten templates then it is classified appropriately. Otherwise it is considered
+as made of several touching characters and split with a graph-cut thus making two
+450 new connected components to classify. They achieve 98% precision for typewritten
+text and 71% precision for handwritten text on 500 forms each coming from a dierent
+writer. The low handwritten precision is related to the training set that did not contain
+typewritten text of a small size. As a result small typewritten fonts were classified as
+handwritten. Replacing the small font size in the test set brings the precisions to 94%
+455 and 89% respectively. This highlights the limits of the training set and the versatility
+of the algorithm with respect to the writing style.
+
+q50. What is sagmentation based on hybrid techniques?
+a50. A large majority of them make several techniques work in symbiosis to obtain better
+520 results. The most recent significant work was the MHS method developed by Tran et al. 
+which won the last ICDAR complex document segmentation competition. It works by iteratively 
+classifying connected components based on multi-level homogenous regions and white space analysis.
