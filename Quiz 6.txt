@@ -176,3 +176,55 @@ Co¨uasnon and tested on a data set of 88745 documents which is an unrivaled dat
 set size. He designed a layout grammar language called DMOS. This language can 
 describe any layout and the associated parser recognizes this layout in an image.
 
+q34. What are the use of algorithms for Projection profiles?
+a34. There are 7 algorithms of this type and the two CASIA algorithms published
+in. Ouwayed and Belaid use projection profiles to segment multi-240 oriented, 
+text only documents. They make a paving of the document with rectangles.
+Then they compute the projection profile of each rectangle along several directions.
+The direction with the highest maximum ofWigner-Ville distribution is that of the text.
+
+q35. What is Segmentation based on filtering algorithms?
+a35. These algorithms usually use specific predefined filters to segment a given type of
+content. They frequently rely on assumptions that the text lines are straight and/or
+horizontal.
+
+q36. Discuss Mathemathical morphology.
+a36. Six algorithms using mathematical morphology have been published. Bockholt
+et al. use several combinations of erosion and dilation to eciently identify
+successively the pictures, the graphics and the text. While being a basic type of processing
+it proves very ecient for the task of document retrieval.265 Ferili et al. 
+replace the logical AND of RLSA by an OR. This makes thealgorithm more computationally 
+ecient as only one run length is performed. They make the assumption that the 
+text is horizontal. An interesting addition is the extensionof the algorithm to 
+natively digital documents based on their basic blocks.
+
+q37. What do you mean by Filtering?
+q37. The only contribution for this kind of algorithm was done by Shi et al. It
+was reused by A2iA in a competition where it was ranked third out of 7 partici275
+pants. The method is based on steerable filters to detect text lines along five 
+orientations. A heuristic post processing is used to solve the issue of connected 
+components spanning several lines.
+
+q38. Explain Segmentation based on straight line identification algorithms.
+a38. Three contributions are based on straight line identification. Louloudis
+280 et al. split the connected components horizontally into blocks based on the average
+character height. This allows the algorithm to work on handwritten text where
+several characters are merged into one connected component. However the horizontal
+partitioning assumes that the text is also horizontal. Once this partitioning is done, they
+apply a Hough transform on the centers of gravity of each block to detect text lines.
+
+q39. What is geometric only clustering?
+a39. The vast majority of clustering algorithms uses only geometric
+features. Before further classifying them based on the color information level they
+305 can process, we can highlight the contribution of the Fraunhofer Institute and the team
+of Konya et al. who made several contributions to the field and participated in every
+document segmentation competition and won two of them.
+
+q40. What do you mean by black and white algorithms?
+a40. Most of them only process black and white images. Liu et al. use a Gaussian 
+Mixture model to classify 310 connected component triplets as text or non text. 
+They use three geometric features  and thus have trivariate Gaussian distributions. 
+The first order neighborhood of a connected component is computed with the Delaunay 
+triangulation and they use the second order neighbors to obtain all the possible 
+triplets. They also use a specific training called MMS which maximizes the class 
+separability.
